@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerold – Personal Portfolio WordPress Theme</title>
+    <link rel="icon" href="./assets/logo/logo-secondary.png" />
+
+    <!-- Daisy UI & Tailwind Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts Link -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+    </style>
+
+    <!-- Tailwind Custom CSS -->
+    <script>
+      /** @type {import('tailwindcss').Config} */
+      tailwind.config = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {
+          extend: {
+            fontFamily: {
+              sora: ["Sora", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+      .services:hover img {
+        transform: rotate(90deg);
+        transition: all 0.5s;
+      }
+
+      .work:hover .work_details img {
+        transform: rotate(360deg);
+        transition: all 0.5s;
+      }
+
+      .work:hover .work_details {
+        opacity: 1;
+        bottom: 30px;
+        transition: all 0.5s;
+      }
+
+      .experience:hover .experience_box h3 {
+        color: white;
+        transition: all 0.5s;
+      }
+
+      .experience:hover .experience_box p {
+        font-weight: 800;
+      }
+    </style>
+  </head>
+
+  <body class="font-sora">
+    <header>
+      <div class="bg-white p-3">
+        <div class="container mx-auto">
+          <div class="navbar text-[#2a1454]">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-white text-black rounded-box z-[1] mt-3 w-52 p-2 shadow text-base font-semibold"
+                >
+                  <li
+                    class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                  >
+                    <a>Services</a>
+                  </li>
+                  <li
+                    class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                  >
+                    <a>Works</a>
+                  </li>
+                  <li
+                    class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                  >
+                    <a>Resume</a>
+                  </li>
+                  <li
+                    class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                  >
+                    <a>Skills</a>
+                  </li>
+                  <li
+                    class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                  >
+                    <a>Testimonials</a>
+                  </li>
+                  <li
+                    class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                  >
+                    <a>Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="cursor-pointer">
+                <img
+                  src="./assets/logo/logo-secondary.png"
+                  alt=""
+                  class="w-14"
+                />
+              </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-base font-semibold">
+                <li
+                  class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                >
+                  <a>Services</a>
+                </li>
+                <li
+                  class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                >
+                  <a>Works</a>
+                </li>
+                <li
+                  class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                >
+                  <a>Resume</a>
+                </li>
+                <li
+                  class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                >
+                  <a>Skills</a>
+                </li>
+                <li
+                  class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                >
+                  <a>Testimonials</a>
+                </li>
+                <li
+                  class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+                >
+                  <a>Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a
+                class="btn px-9 rounded-full bg-gradient-to-r from-[#7846DD] to-[#2E175C] hover:from-[#2E175C] hover:to-[#7846DD] hover:transition hover:duration-1000 text-white font-bold text-base border-none"
+                >Hire me!</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section Start -->
+      <section>
+        <div class="bg-white">
+          <div class="container mx-auto">
+            <div class="hero py-10">
+              <div
+                class="hero-content flex-col lg:flex-row-reverse justify-between items-center gap-10 bg-[url('./assets/images/')] bg-cover bg-center bg-no-repeat"
+              >
+                <div
+                  class="shadow-2xl transform rotate-6 hover:rotate-0 transition duration-500 w-11/12 sm:w-2/5 md:w-3/5 lg:w-5/12 rounded-3xl"
+                >
+                  <img
+                    src="./assets/images/hero_img.jpg"
+                    alt="hero_img"
+                    class="rounded-3xl shadow-2xl border-transparent border-2 hover:border-[#8750f7]"
+                  />
+                </div>
+                <div
+                  class="flex flex-col justify-center text-[#8750f7] w-full lg:w-1/2 gap-4"
+                >
+                  <h3 class="text-2xl lg:text-4xl font-bold text-black pb-2">
+                    I am Gerold
+                  </h3>
+                  <h1
+                    class="text-3xl md:text-5xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text"
+                  >
+                    Web Developer + UX Designer
+                  </h1>
+                  <p class="pt-4 pb-10 text-xl text-black">
+                    I break down complex user experience problems to create
+                    integrity focussed solutions that connect billions of people
+                  </p>
+                  <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div
+                      class="flex items-center justify-center gap-2 text-[#8750f7] text-base rounded-full bg-white border border-[#5500ff] hover:bg-[#5500ff] hover:text-white transition duration-500 px-9 py-4 font-semibold cursor-pointer"
+                    >
+                      <button
+                        class="w-full md:w-fit bg-transparent tracking-wide"
+                      >
+                        Download CV
+                      </button>
+                      <i class="fa-solid fa-download"></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <div
+                        class="flex justify-center items-center w-9 h-9 text-[#8750f7] text-base rounded-full bg-white border border-[#5500ff] hover:bg-[#5500ff] hover:text-white transition duration-500 cursor-pointer"
+                      >
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </div>
+                      <div
+                        class="flex justify-center items-center w-9 h-9 text-[#8750f7] text-base rounded-full bg-white border border-[#5500ff] hover:bg-[#5500ff] hover:text-white transition duration-500 cursor-pointer"
+                      >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </div>
+                      <div
+                        class="flex justify-center items-center w-9 h-9 text-[#8750f7] text-base rounded-full bg-white border border-[#5500ff] hover:bg-[#5500ff] hover:text-white transition duration-500 cursor-pointer"
+                      >
+                        <i class="fa-brands fa-dribbble"></i>
+                      </div>
+                      <div
+                        class="flex justify-center items-center w-9 h-9 text-[#8750f7] text-base rounded-full bg-white border border-[#5500ff] hover:bg-[#5500ff] hover:text-white transition duration-500 cursor-pointer"
+                      >
+                        <i class="fa-brands fa-github"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-wrap justify-between items-start gap-7 text-[#8750f7] pb-20 w-full mx-auto"
+            >
+              <div class="flex gap-3 mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold">14</h1>
+                <p class="text-xl">Years of <br />Experience</p>
+              </div>
+              <div class="flex gap-3 mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold">50+</h1>
+                <p class="text-xl">Project <br />Completed</p>
+              </div>
+              <div class="flex gap-3 mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold">1.5K</h1>
+                <p class="text-xl">Happy <br />Clients</p>
+              </div>
+              <div class="flex gap-3 mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold">14</h1>
+                <p class="text-xl">Years of <br />Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+
+      <!-- Services Section Start -->
+      <section>
+        <div class="bg-[#F6F3FC]">
+          <div class="container mx-auto">
+            <div
+              class="py-32 flex flex-col gap-14 px-6 md:px-10 overflow-hidden"
+            >
+              <div
+                class="flex flex-col w-full md:w-1/2 mx-auto text-center gap-4"
+              >
+                <h1
+                  class="text-4xl lg:text-5xl font-bold text-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text"
+                >
+                  My Quality Services
+                </h1>
+                <p class="text-base text-black">
+                  We put your ideas and thus your wishes in the form of a unique
+                  web project that inspires you and you customers.
+                </p>
+              </div>
+              <div class="text-[#8750f7]">
+                <div
+                  class="services flex flex-col md:flex-row justify-between gap-5 p-8 border-b border-[#dddddd] items-center hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] hover:text-white transition duration-500"
+                >
+                  <div class="flex gap-5 items-center">
+                    <span class="text-base md:text-xl font-bold">01</span>
+                    <h3 class="text-xl md:text-3xl font-bold">
+                      Web Development
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between w-full md:w-3/5"
+                  >
+                    <p class="text-base md:text-xl">
+                      Conducting qualitative and quantitative research to
+                      understand <br />
+                      user needs, behaviors, and pain points. Utilizing
+                      methods...
+                    </p>
+                    <img
+                      src="./assets/icons/top-right.png"
+                      alt=""
+                      class="w-4"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="services flex flex-col md:flex-row gap-5 justify-between p-8 border-b border-[#dddddd] items-center hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] hover:text-white transition duration-500"
+                >
+                  <div class="flex gap-5 items-center">
+                    <span class="text-base md:text-xl font-bold">02</span>
+                    <h3 class="text-xl md:text-3xl font-bold">UI/UX Design</h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between w-full md:w-3/5"
+                  >
+                    <p class="text-base md:text-xl">
+                      Conducting qualitative and quantitative research to
+                      understand <br />
+                      user needs, behaviors, and pain points. Utilizing
+                      methods...
+                    </p>
+                    <img
+                      src="./assets/icons/top-right.png"
+                      alt=""
+                      class="w-4"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="services flex flex-col md:flex-row gap-5 justify-between p-8 border-b border-[#dddddd] items-center hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] hover:text-white transition duration-500"
+                >
+                  <div class="flex gap-5 items-center">
+                    <span class="text-base md:text-xl font-bold">03</span>
+                    <h3 class="text-xl md:text-3xl font-bold">
+                      Content Writing
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between w-full md:w-3/5"
+                  >
+                    <p class="text-base md:text-xl">
+                      Conducting qualitative and quantitative research to
+                      understand <br />
+                      user needs, behaviors, and pain points. Utilizing
+                      methods...
+                    </p>
+                    <img
+                      src="./assets/icons/top-right.png"
+                      alt=""
+                      class="w-4"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="services flex flex-col md:flex-row gap-5 justify-between p-8 border-b border-[#dddddd] items-center hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] hover:text-white transition duration-500"
+                >
+                  <div class="flex gap-5 items-center">
+                    <span class="text-base md:text-xl font-bold">04</span>
+                    <h3 class="text-xl md:text-3xl font-bold">
+                      Digital Marketing
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between w-full md:w-3/5"
+                  >
+                    <p class="text-base md:text-xl">
+                      Conducting qualitative and quantitative research to
+                      understand <br />
+                      user needs, behaviors, and pain points. Utilizing
+                      methods...
+                    </p>
+                    <img
+                      src="./assets/icons/top-right.png"
+                      alt=""
+                      class="w-4"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section End -->
+
+      <!-- My Recent Works Section Start -->
+      <section>
+        <div class="bg-white">
+          <div class="container mx-auto overflow-hidden">
+            <div class="py-32 px-10 flex flex-col gap-14">
+              <div
+                class="flex flex-col w-5/6 md:w-1/2 mx-auto text-center gap-12 items-center"
+              >
+                <h1
+                  class="text-4xl lg:text-5xl font-bold text-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text"
+                >
+                  My Recent Works
+                </h1>
+                <div
+                  class="flex gap-1 text-white py-2 px-4 bg-[#f6f3fc] rounded-full w-fit"
+                >
+                  <div
+                    class="py-3 px-6 hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] rounded-full text-[#8750f7] hover:text-white cursor-pointer"
+                  >
+                    <p class="text-base">All</p>
+                  </div>
+                  <div
+                    class="py-3 px-6 hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] rounded-full text-[#8750f7] hover:text-white cursor-pointer"
+                  >
+                    <p class="text-base">Apps</p>
+                  </div>
+                  <div
+                    class="py-3 px-6 hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] rounded-full text-[#8750f7] hover:text-white cursor-pointer"
+                  >
+                    <p class="text-base">Branding</p>
+                  </div>
+                  <div
+                    class="py-3 px-6 hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] rounded-full text-[#8750f7] hover:text-white cursor-pointer"
+                  >
+                    <p class="text-base">Content</p>
+                  </div>
+                  <div
+                    class="py-3 px-6 hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] rounded-full text-[#8750f7] hover:text-white cursor-pointer"
+                  >
+                    <p class="text-base">UX/UI</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div
+                  class="work w-full relative pt-9 px-9 bg-[#140c1c] rounded-2xl overflow-hidden"
+                >
+                  <img src="./assets/images/portfolio-4.jpg" alt="" />
+                  <div
+                    class="work_details absolute -bottom-10 opacity-0 w-11/12 p-5 bg-gradient-to-r from-[#8750f7] to-[#2a1454] flex justify-between items-center gap-4 rounded-2xl text-white"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <h3 class="text-xl md:text-3xl">Deloitte</h3>
+                      <p>Project was about precision and information....</p>
+                    </div>
+                    <img
+                      src="./assets/icons/top-right.png"
+                      alt=""
+                      class="w-4"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="work w-full relative pt-9 px-9 bg-[#140c1c] rounded-2xl overflow-hidden"
+                >
+                  <img src="./assets/images/portfolio-3.jpg" alt="" />
+                  <div
+                    class="work_details absolute -bottom-10 opacity-0 w-11/12 mx-auto p-5 bg-gradient-to-r from-[#8750f7] to-[#2a1454] flex justify-between items-center gap-4 rounded-2xl text-white"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <h3 class="text-xl md:text-3xl">New Age</h3>
+                      <p>Project was about precision and information....</p>
+                    </div>
+                    <img
+                      src="./assets/icons/top-right.png"
+                      alt=""
+                      class="w-4"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="work w-full relative pt-9 px-9 bg-[#140c1c] rounded-2xl overflow-hidden"
+                >
+                  <img src="./assets/images/portfolio-2.jpg" alt="" />
+                  <div
+                    class="work_details absolute -bottom-10 opacity-0 w-11/12 mx-auto p-5 bg-gradient-to-r from-[#8750f7] to-[#2a1454] flex justify-between items-center gap-4 rounded-2xl text-white"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <h3 class="text-xl md:text-3xl">Sebastian</h3>
+                      <p>Project was about precision and information....</p>
+                    </div>
+                    <img
+                      src="./assets/icons/top-right.png"
+                      alt=""
+                      class="w-4"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="work w-full relative pt-9 px-9 bg-[#140c1c] rounded-2xl overflow-hidden"
+                >
+                  <img src="./assets/images/portfolio-1.jpg" alt="" />
+                  <div
+                    class="work_details absolute -bottom-10 opacity-0 w-11/12 mx-auto p-5 bg-gradient-to-r from-[#8750f7] to-[#2a1454] flex justify-between items-center gap-4 rounded-2xl text-white"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <h3 class="text-xl md:text-3xl">Mochnix</h3>
+                      <p>Project was about precision and information....</p>
+                    </div>
+                    <img
+                      src="./assets/icons/top-right.png"
+                      alt=""
+                      class="w-4"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- My Recent Works Section End -->
+
+      <!-- Experience & Education Section Start -->
+      <section>
+        <div class="bg-[#F6F3FC]">
+          <div class="container mx-auto">
+            <div
+              class="py-32 flex flex-col md:flex-row justify-between gap-10 px-6 md:px-10"
+            >
+              <div class="experience flex flex-col gap-12 w-full md:w-1/2">
+                <div class="flex gap-3">
+                  <div>
+                    <img src="./assets/icons/quality.png" alt="" class="w-10" />
+                  </div>
+                  <h1
+                    class="text-4xl lg:text-5xl font-bold text-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text"
+                  >
+                    My Experience
+                  </h1>
+                </div>
+                <div class="flex flex-col gap-8">
+                  <div
+                    class="experience_box bg-white rounded-3xl py-5 px-8 text-black hover:text-white hover:bg-gradient-to-r hover:from-[#8750f7] hover:to-[#2a1454] transition duration-500"
+                  >
+                    <h3
+                      class="text-[#8750f7] text-base md:text-xl font-extrabold mb-2"
+                    >
+                      2022 - Present
+                    </h3>
+                    <h2 class="text-lg md:text-2xl font-bold">
+                      LEAD DEVELOPER
+                    </h2>
+                    <p class="text-sm md:text-base">Blockdots, London</p>
+                  </div>
+                  <div
+                    class="experience_box bg-white rounded-3xl py-5 px-8 text-black hover:text-white hover:bg-gradient-to-r hover:from-[#8750f7] hover:to-[#2a1454] transition duration-500"
+                  >
+                    <h3
+                      class="text-[#8750f7] text-base md:text-xl font-extrabold mb-2"
+                    >
+                      2021 - 2022
+                    </h3>
+                    <h2 class="text-lg md:text-2xl font-bold">
+                      FULL STACK WEB DEVELOPER
+                    </h2>
+                    <p class="text-sm md:text-base">Parsons, The New School</p>
+                  </div>
+                  <div
+                    class="experience_box bg-white rounded-3xl py-5 px-8 text-black hover:text-white hover:bg-gradient-to-r hover:from-[#8750f7] hover:to-[#2a1454] transition duration-500"
+                  >
+                    <h3
+                      class="text-[#8750f7] text-base md:text-xl font-extrabold mb-2"
+                    >
+                      2020 - 2021
+                    </h3>
+                    <h2 class="text-lg md:text-2xl font-bold">UI DESIGNER</h2>
+                    <p class="text-sm md:text-base">House of Life, Leeds</p>
+                  </div>
+                  <div
+                    class="experience_box bg-white rounded-3xl py-5 px-8 text-black hover:text-white hover:bg-gradient-to-r hover:from-[#8750f7] hover:to-[#2a1454] transition duration-500"
+                  >
+                    <h3
+                      class="text-[#8750f7] text-base md:text-xl font-extrabold mb-2"
+                    >
+                      2018 - 2020
+                    </h3>
+                    <h2 class="text-lg md:text-2xl font-bold">
+                      JUNIOR GRAPHICS DESIGNER
+                    </h2>
+                    <p class="text-sm md:text-base">Theme Junction, Bursa</p>
+                  </div>
+                </div>
+              </div>
+              <div class="experience flex flex-col gap-12 w-full md:w-1/2">
+                <div class="flex gap-3">
+                  <div>
+                    <img
+                      src="./assets/icons/mortarboard.png"
+                      alt=""
+                      class="w-10"
+                    />
+                  </div>
+                  <h1
+                    class="text-4xl lg:text-5xl font-bold text-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text"
+                  >
+                    My Education
+                  </h1>
+                </div>
+                <div class="flex flex-col gap-8">
+                  <div
+                    class="experience_box bg-white rounded-3xl py-5 px-8 text-black hover:text-white hover:bg-gradient-to-r hover:from-[#8750f7] hover:to-[#2a1454] transition duration-500"
+                  >
+                    <h3
+                      class="text-[#8750f7] text-base md:text-xl font-extrabold mb-2"
+                    >
+                      2020 - 2023
+                    </h3>
+                    <h2 class="text-lg md:text-2xl font-bold">
+                      PROGRAMMING COURSE
+                    </h2>
+                    <p class="text-sm md:text-base">Harverd University</p>
+                  </div>
+                  <div
+                    class="experience_box bg-white rounded-3xl py-5 px-8 text-black hover:text-white hover:bg-gradient-to-r hover:from-[#8750f7] hover:to-[#2a1454] transition duration-500"
+                  >
+                    <h3
+                      class="text-[#8750f7] text-base md:text-xl font-extrabold mb-2"
+                    >
+                      2016 - 2020
+                    </h3>
+                    <h2 class="text-lg md:text-2xl font-bold">
+                      GRAPHIC DESIGN COURSE
+                    </h2>
+                    <p class="text-sm md:text-base">University of Denmark</p>
+                  </div>
+                  <div
+                    class="experience_box bg-white rounded-3xl py-5 px-8 text-black hover:text-white hover:bg-gradient-to-r hover:from-[#8750f7] hover:to-[#2a1454] transition duration-500"
+                  >
+                    <h3
+                      class="text-[#8750f7] text-base md:text-xl font-extrabold mb-2"
+                    >
+                      2012 - 2015
+                    </h3>
+                    <h2 class="text-lg md:text-2xl font-bold">
+                      WEB DESIGN COURSE
+                    </h2>
+                    <p class="text-sm md:text-base">University of California</p>
+                  </div>
+                  <div
+                    class="experience_box bg-white rounded-3xl py-5 px-8 text-black hover:text-white hover:bg-gradient-to-r hover:from-[#8750f7] hover:to-[#2a1454] transition duration-500"
+                  >
+                    <h3
+                      class="text-[#8750f7] text-base md:text-xl font-extrabold mb-2"
+                    >
+                      2010 - 2011
+                    </h3>
+                    <h2 class="text-lg md:text-2xl font-bold">
+                      DESIGN & TECHNOLOGY
+                    </h2>
+                    <p class="text-sm md:text-base">Parsons, The New School</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience & Education Section End -->
+
+      <!-- Skills Section Start -->
+      <section>
+        <div class="bg-white">
+          <div class="container mx-auto">
+            <div class="py-32 px-6 md:px-10 flex flex-col gap-14">
+              <div
+                class="flex flex-col w-full md:w-1/2 mx-auto text-center gap-12 items-center"
+              >
+                <h1
+                  class="text-4xl lg:text-5xl font-bold text-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text"
+                >
+                  My Skills
+                </h1>
+                <p class="text-base text-black">
+                  We put your ideas and thus your wishes in the form of a unique
+                  web project that inspires you and you customers.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-10 justify-center items-center">
+                <div class="flex flex-col gap-5 items-center">
+                  <div
+                    class="py-6 px-4 bg-[#f6f3fc] hover:bg-[#2a1454] rounded-3xl flex flex-col items-center gap-5 opacity-50 hover:opacity-100 transition duration-500 text-[#8750f7] w-40"
+                  >
+                    <div>
+                      <img src="./assets/logo/figma.png" alt="" class="w-16" />
+                    </div>
+                    <h3 class="text-xl font-bold">92%</h3>
+                  </div>
+                  <p class="text-base text-[#8750f7]">Figma</p>
+                </div>
+                <div class="flex flex-col gap-5 items-center">
+                  <div
+                    class="py-6 px-4 bg-[#f6f3fc] hover:bg-[#2a1454] rounded-3xl flex flex-col items-center gap-5 opacity-50 hover:opacity-100 transition duration-500 text-[#8750f7] w-40"
+                  >
+                    <div>
+                      <img src="./assets/logo/sketch.png" alt="" class="w-16" />
+                    </div>
+                    <h3 class="text-xl font-bold">80%</h3>
+                  </div>
+                  <p class="text-base text-[#8750f7]">Sketch</p>
+                </div>
+                <div class="flex flex-col gap-5 items-center">
+                  <div
+                    class="py-6 px-4 bg-[#f6f3fc] hover:bg-[#2a1454] rounded-3xl flex flex-col items-center gap-5 opacity-50 hover:opacity-100 transition duration-500 text-[#8750f7] w-40"
+                  >
+                    <div>
+                      <img src="./assets/logo/xd.png" alt="" class="w-16" />
+                    </div>
+                    <h3 class="text-xl font-bold">85%</h3>
+                  </div>
+                  <p class="text-base text-[#8750f7]">XD</p>
+                </div>
+                <div class="flex flex-col gap-5 items-center">
+                  <div
+                    class="py-6 px-4 bg-[#f6f3fc] hover:bg-[#2a1454] rounded-3xl flex flex-col items-center gap-5 opacity-50 hover:opacity-100 transition duration-500 text-[#8750f7] w-40"
+                  >
+                    <div>
+                      <img src="./assets/logo/wp.png" alt="" class="w-16" />
+                    </div>
+                    <h3 class="text-xl font-bold">99%</h3>
+                  </div>
+                  <p class="text-base text-[#8750f7]">WordPress</p>
+                </div>
+                <div class="flex flex-col gap-5 items-center">
+                  <div
+                    class="py-6 px-4 bg-[#f6f3fc] hover:bg-[#2a1454] rounded-3xl flex flex-col items-center gap-5 opacity-50 hover:opacity-100 transition duration-500 text-[#8750f7] w-40"
+                  >
+                    <div>
+                      <img src="./assets/logo/react.png" alt="" class="w-16" />
+                    </div>
+                    <h3 class="text-xl font-bold">89%</h3>
+                  </div>
+                  <p class="text-base text-[#8750f7]">React</p>
+                </div>
+                <div class="flex flex-col gap-5 items-center">
+                  <div
+                    class="py-6 px-4 bg-[#f6f3fc] hover:bg-[#2a1454] rounded-3xl flex flex-col items-center gap-5 opacity-50 hover:opacity-100 transition duration-500 text-[#8750f7] w-40"
+                  >
+                    <div>
+                      <img src="./assets/logo/js.png" alt="" class="w-16" />
+                    </div>
+                    <h3 class="text-xl font-bold">93%</h3>
+                  </div>
+                  <p class="text-base text-[#8750f7]">JavaScript</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section End -->
+
+      <!-- Testimonials Section Start -->
+      <section>
+        <div class="bg-[#f8f5ff] py-32 px-4">
+          <div
+            class="container mx-auto max-w-6xl flex flex-col md:flex-row gap-14"
+          >
+            <div class="md:w-1/2">
+              <h1
+                class="text-4xl lg:text-5xl font-bold text-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text"
+              >
+                My Client's Stories
+              </h1>
+              <p class="text-gray-500 mt-2">
+                Empowering people in new a digital journey with my super
+                services
+              </p>
+            </div>
+            <div class="md:w-1/2">
+              <div class="flex gap-5">
+                <div
+                  class="bg-white rounded-lg p-6 flex flex-col gap-5 shadow-md"
+                >
+                  <div>
+                    <img
+                      src="./assets/images/testi-2.jpg"
+                      alt="Shoes"
+                      class="[border-radius:10px_100px_10px_500px]"
+                    />
+                  </div>
+                  <p class="text-gray-700 text-sm mt-4">
+                    “Taylor is a professional Designer he really helps my
+                    business by providing value to my business.
+                  </p>
+                  <div>
+                    <h3 class="text-[#8750f7] text-lg font-semibold">
+                      Tim Bailey
+                    </h3>
+                    <p class="text-sm text-gray-500">
+                      SEO Specialist, Theme Junction
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="bg-white rounded-lg p-6 flex flex-col gap-5 shadow-md"
+                >
+                  <div>
+                    <img
+                      src="./assets/images/testi-1.jpg"
+                      alt="Shoes"
+                      class="[border-radius:10px_100px_10px_500px]"
+                    />
+                  </div>
+                  <p class="text-gray-700 text-sm mt-4">
+                    “Taylor is a professional Designer; he really helps my
+                    business by providing value to my business.”
+                  </p>
+                  <div>
+                    <h3 class="text-[#8750f7] text-lg font-semibold">
+                      Brandon Fraser
+                    </h3>
+                    <p class="text-sm text-gray-500">
+                      Senior Software Dev, Cosmic Sport
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials Section End -->
+
+      <!-- Blog Section Start -->
+      <section>
+        <div class="bg-white py-32 px-4">
+          <div class="container mx-auto max-w-6xl text-center">
+            <h1
+              class="text-4xl lg:text-5xl font-bold text-transparent bg-gradient-to-r from-[#8750f7] to-[#2a1454] bg-clip-text"
+            >
+              Recent Blogs
+            </h1>
+            <p class="text-gray-500 mt-2">
+              We put your ideas and thus your wishes in the form of a unique web
+              project that inspires you and your customers.
+            </p>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-20"
+            >
+              <div class="relative shadow-lg rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/blog-0-410x370.jpg"
+                  alt="Blog Image"
+                  class="w-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-[#8750f7] text-white text-xs font-semibold px-3 py-1 rounded-full"
+                >
+                  Development
+                </div>
+                <div
+                  class="absolute left-2 bottom-4 bg-white hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] text-black hover:text-white text-xs font-semibold px-3 py-3 rounded-2xl"
+                >
+                  <div class="flex items-center gap-2 text-sm">
+                    <span class="flex items-center gap-1">
+                      <i class="fas fa-calendar-alt"></i> May 10, 2024
+                    </span>
+                    <span class="flex items-center gap-1">
+                      <i class="fas fa-comments"></i> No Comments
+                    </span>
+                  </div>
+                  <h3 class="text-lg font-semibold">
+                    Want To Upgrade Your Brain? Stop...
+                  </h3>
+                </div>
+              </div>
+              <div class="relative shadow-lg rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/blog-1-410x370.jpg"
+                  alt="Blog Image"
+                  class="w-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-[#8750f7] text-white text-xs font-semibold px-3 py-1 rounded-full"
+                >
+                  Development
+                </div>
+                <div
+                  class="absolute left-2 bottom-4 bg-white hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] text-black hover:text-white text-xs font-semibold px-3 py-3 rounded-2xl"
+                >
+                  <div class="flex items-center gap-2 text-sm">
+                    <span class="flex items-center gap-1">
+                      <i class="fas fa-calendar-alt"></i> May 10, 2024
+                    </span>
+                    <span class="flex items-center gap-1">
+                      <i class="fas fa-comments"></i> No Comments
+                    </span>
+                  </div>
+                  <h3 class="text-lg font-semibold">
+                    Want To Upgrade Your Brain? Stop...
+                  </h3>
+                </div>
+              </div>
+              <div class="relative shadow-lg rounded-xl overflow-hidden">
+                <img
+                  src="./assets/images/blog-2-410x370.jpg"
+                  alt="Blog Image"
+                  class="w-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-[#8750f7] text-white text-xs font-semibold px-3 py-1 rounded-full"
+                >
+                  Development
+                </div>
+                <div
+                  class="absolute left-2 bottom-4 bg-white hover:bg-gradient-to-r from-[#8750f7] to-[#2a1454] text-black hover:text-white text-xs font-semibold px-3 py-3 rounded-2xl"
+                >
+                  <div class="flex items-center gap-2 text-sm">
+                    <span class="flex items-center gap-1">
+                      <i class="fas fa-calendar-alt"></i> May 10, 2024
+                    </span>
+                    <span class="flex items-center gap-1">
+                      <i class="fas fa-comments"></i> No Comments
+                    </span>
+                  </div>
+                  <h3 class="text-lg font-semibold">
+                    Want To Upgrade Your Brain? Stop...
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Blog Section End -->
+
+      <!-- Contact Section Start -->
+      <section>
+        <div class="bg-[#F6F3FC]">
+          <div class="container mx-auto py-32">
+            <div
+              class="container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-6 md:px-10"
+            >
+              <div class="space-y-6 bg-white p-8 rounded-2xl shadow-2xl">
+                <h2 class="text-3xl font-bold text-[#8750f7]">
+                  Let’s <span class="text-[#5500ff]">work together!</span>
+                </h2>
+                <p class="text-gray-500">
+                  I design and code beautifully simple things and I love what I
+                  do. Just simple like that!
+                </p>
+                <form class="space-y-6">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input
+                      type="text"
+                      placeholder="First name"
+                      class="w-full p-3 border rounded-lg bg-white text-[#8750f7] focus:outline-none focus:ring-2 focus:ring-[#8750f7]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Last name"
+                      class="w-full p-3 border rounded-lg bg-white text-[#8750f7] focus:outline-none focus:ring-2 focus:ring-[#8750f7]"
+                    />
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input
+                      type="email"
+                      placeholder="Email address"
+                      class="w-full p-3 border rounded-lg bg-white text-[#8750f7] focus:outline-none focus:ring-2 focus:ring-[#8750f7]"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Phone number"
+                      class="w-full p-3 border rounded-lg bg-white text-[#8750f7] focus:outline-none focus:ring-2 focus:ring-[#8750f7]"
+                    />
+                  </div>
+                  <div>
+                    <select
+                      class="w-full p-3 border rounded-lg bg-white text-[#8750f7] focus:outline-none focus:ring-2 focus:ring-[#8750f7]"
+                    >
+                      <option disabled selected>
+                        — Please choose an option —
+                      </option>
+                      <option>Web Development</option>
+                      <option>UI/UX Design</option>
+                      <option>Consultation</option>
+                    </select>
+                  </div>
+                  <div>
+                    <textarea
+                      placeholder="Message"
+                      class="w-full p-3 border rounded-lg bg-white text-[#8750f7] focus:outline-none focus:ring-2 focus:ring-[#8750f7] h-28"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="px-6 py-3 bg-gradient-to-r from-[#8750f7] to-[#5500ff] text-white font-bold rounded-full shadow-lg hover:opacity-90 transition"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+              <div class="space-y-8">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-[#8750f7] to-[#5500ff] text-white"
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Phone</p>
+                    <p class="font-semibold">+01 123 654 8096</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-[#8750f7] to-[#5500ff] text-white"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Email</p>
+                    <p class="font-semibold">gerolddesign@mail.com</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-[#8750f7] to-[#5500ff] text-white"
+                  >
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Address</p>
+                    <p class="font-semibold">
+                      Warne Park Street Pine, <br />
+                      FL 33157, New York
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section End -->
+    </main>
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="bg-gradient-to-r from-[#2a1454] to-[#6e33e5] py-12">
+        <div class="flex flex-col items-center justify-center gap-3">
+          <div>
+            <img src="./assets/logo/logo-secondary.png" alt="" class="w-20" />
+          </div>
+          <ul
+            class="menu menu-horizontal px-1 text-base text-white font-semibold"
+          >
+            <li
+              class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+            >
+              <a>Services</a>
+            </li>
+            <li
+              class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+            >
+              <a>Works</a>
+            </li>
+            <li
+              class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+            >
+              <a>Resume</a>
+            </li>
+            <li
+              class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+            >
+              <a>Skills</a>
+            </li>
+            <li
+              class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+            >
+              <a>Testimonials</a>
+            </li>
+            <li
+              class="border-b-2 border-transparent hover:border-primary transition hover:duration-1000"
+            >
+              <a>Contact</a>
+            </li>
+          </ul>
+          <p class="text-[#8750f7]">
+            &copy; 2024 All Rights Reserved by ThemeJunction
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+  </body>
+</html>
